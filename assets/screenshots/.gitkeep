@@ -1,0 +1,11 @@
+# Place App Store screenshots here
+
+Suggested filenames:
+
+- `hero.png` — hero phone mockup
+- `workouts.png`
+- `trainers.png`
+- `progress.png`
+- `profiles.png`
+
+After adding files, update `index.html` to replace the placeholder divs with `<img>` tags.

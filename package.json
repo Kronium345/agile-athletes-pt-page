@@ -1,0 +1,17 @@
+{
+  "name": "agile-athletes-trainer-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static landing page for Agile Athletes trainer partner outreach",
+  "scripts": {
+    "config": "node scripts/generate-config.js",
+    "dev": "npm run config && live-server --port=3000 --open=/",
+    "build": "npm run config",
+    "format": "prettier --write \"**/*.{html,css,js,md}\""
+  },
+  "devDependencies": {
+    "dotenv": "^16.5.0",
+    "live-server": "^1.2.2",
+    "prettier": "^3.5.3"
+  }
+}
