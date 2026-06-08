@@ -37,7 +37,7 @@ trainer-landing/
 | App Store | [Agile Athletes on the App Store](https://apps.apple.com/gb/app/agile-athletes/id6758623960) |
 | Privacy policy | [privacypolicies.com live policy](https://www.privacypolicies.com/live/a6611016-131d-4c88-a822-cbedda90c615) |
 | Contact email | `kroniumtechlimited123@gmail.com` |
-| Google Play | “Android coming soon” badge |
+| Google Play | [Agile Athletes on Google Play](https://play.google.com/store/apps/details?id=com.kroniumtech.agileathletes) |
 
 ### Screenshots (`assets/screenshots/`)
 
@@ -243,4 +243,4 @@ Push to GitHub, import in Vercel, set root to the repo. The page will be at `/tr
 
 ---
 
-**Agile Athletes** · Kronium Tech Limited · iOS live · Android coming soon
+**Agile Athletes** · Kronium Tech Limited · Live on iOS & Android
