@@ -146,7 +146,7 @@ function setSubmitting(isSubmitting) {
   submitBtn.disabled = isSubmitting;
   submitBtn.textContent = isSubmitting
     ? "Sending…"
-    : "Request early partner info";
+    : "Request trainer info";
 }
 
 function validateForm(formEl) {

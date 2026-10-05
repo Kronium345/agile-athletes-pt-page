@@ -43,12 +43,14 @@ trainer-landing/
 
 | File | Used for |
 |------|----------|
-| `app-image-1.png` | Hero + preview carousel |
-| `app-image-2.png` | Rest timer |
-| `app-image-3.png` | Guided workout |
-| `app-image-4.png` | Exercise detail & set tracking |
-| `app-image-5.png` | Exercise library |
-| `app-image-6.png` | Home with activity history |
+| `app-image-1.jpg` | Hero + carousel: Learn every move |
+| `app-image-2.jpg` | Every step counts (steps & trophies) |
+| `app-image-3.jpg` | Every rep coached (sets, reps, rest timer) |
+| `app-image-4.jpg` | Never train alone (training partners) |
+| `app-image-5.jpg` | Plans that fit your level (presets) |
+| `app-image-6.jpg` | AI Form Coach (Premium) |
+
+Resized to 780px wide JPEG (quality 85) from the App Store screenshot set.
 
 ### Environment variables (`.env`)
 
