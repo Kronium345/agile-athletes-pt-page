@@ -83,6 +83,7 @@ a:hover {
 }
 
 .brand {
+  margin-right: auto;
   display: flex;
   align-items: center;
   gap: 0.65rem;
@@ -108,6 +109,7 @@ a:hover {
   border: none;
   background: transparent;
   cursor: pointer;
+  order: 1;
 }
 
 .nav-toggle span {
@@ -162,7 +164,7 @@ a:hover {
   font-weight: 600;
 }
 
-.header-cta {
+.btn.header-cta {
   display: none;
 }
 
@@ -571,6 +573,85 @@ a:hover {
   color: var(--color-text-secondary);
 }
 
+/* FAQs */
+.faq-list {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 760px;
+}
+
+.faq-item {
+  background: var(--color-bg);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+}
+
+.faq-item summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  flex-shrink: 0;
+  color: var(--color-primary);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.faq-item[open] summary::after {
+  content: "\2212";
+}
+
+.faq-item p {
+  margin: 0;
+  padding: 0 1.25rem 1.1rem;
+  color: var(--color-text-secondary);
+}
+
+/* Support */
+.support-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.75rem 1.5rem;
+  background: #fff;
+  border: 1px solid var(--color-border-orange);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.support-card h2 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  letter-spacing: -0.02em;
+}
+
+.support-card p {
+  margin: 0;
+  max-width: 560px;
+  color: var(--color-text-secondary);
+}
+
+.support-card .btn {
+  flex-shrink: 0;
+}
+
+[hidden] {
+  display: none !important;
+}
+
 /* Partner form */
 .partner-section {
   background: linear-gradient(
@@ -744,26 +825,7 @@ a:hover {
 
 /* Tablet+ */
 @media (min-width: 768px) {
-  .nav-toggle {
-    display: none;
-  }
-
-  .site-nav {
-    display: block;
-    position: static;
-    background: transparent;
-    border: none;
-    padding: 0;
-    box-shadow: none;
-  }
-
-  .site-nav ul {
-    flex-direction: row;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .header-cta {
+  .btn.header-cta {
     display: inline-flex;
   }
 
@@ -801,6 +863,35 @@ a:hover {
 }
 
 @media (min-width: 1024px) {
+  .brand {
+    margin-right: 0;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    display: block;
+    position: static;
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .site-nav ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .support-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .card-grid {
     grid-template-columns: repeat(3, 1fr);
   }

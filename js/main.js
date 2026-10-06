@@ -7,6 +7,7 @@ const {
   EMAILJS_PUBLIC_KEY,
   EMAILJS_SERVICE_ID,
   EMAILJS_TEMPLATE_ID,
+  DONATION_URL,
 } = CONFIG;
 
 const navToggle = document.querySelector(".nav-toggle");
@@ -17,6 +18,14 @@ const emailJsReady =
   EMAILJS_PUBLIC_KEY && EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID;
 
 const EMAILJS_API = "https://api.emailjs.com/api/v1.0/email/send";
+
+const supportSection = document.getElementById("support");
+const donateLink = document.getElementById("donate-link");
+
+if (DONATION_URL && supportSection && donateLink) {
+  donateLink.href = DONATION_URL;
+  supportSection.hidden = false;
+}
 
 if (navToggle && siteNav) {
   navToggle.addEventListener("click", () => {

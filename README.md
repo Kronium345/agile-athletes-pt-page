@@ -67,6 +67,7 @@ cp .env.example .env
 | `EMAILJS_PUBLIC_KEY` | EmailJS public key |
 | `EMAILJS_SERVICE_ID` | EmailJS service ID |
 | `EMAILJS_TEMPLATE_ID` | EmailJS template ID |
+| `DONATION_URL` | Donation page link (Ko-fi, Buy Me a Coffee, Stripe Payment Link…). Leave empty to hide the Support section |
 
 Run `npm run config` (or `npm run dev`) to generate `js/config.js` from `.env`.  
 **Do not commit** `.env` or `js/config.js`.
