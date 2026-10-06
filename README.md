@@ -1,6 +1,6 @@
-# Agile Athletes — Trainer Partner Landing Page
+# Agile Athletes — Landing Page
 
-Static marketing page for personal trainer outreach. Deploy to **`https://agileathletes.app/trainers/`** or **`https://trainers.agileathletes.app`**.
+Static marketing page for the Agile Athletes app, with a trainer enquiry form at the bottom. Deploy to the root of **`https://agileathletes.app`**.
 
 ## Local preview
 
@@ -85,7 +85,7 @@ If EmailJS IDs are empty in `.env`, submit falls back to **mailto** (unreliable 
    - `http://localhost:3000`
    - `http://127.0.0.1:3000`
    - `https://agileathletes.app`
-   - `https://trainers.agileathletes.app`
+   - `https://www.agileathletes.app`
 
    A **403 Forbidden** error almost always means the current URL is missing from this list.
 
@@ -103,7 +103,7 @@ If EmailJS IDs are empty in `.env`, submit falls back to **mailto** (unreliable 
 Switch to **Code** view if the visual editor strips layout, then paste:
 
 ```html
-<p>A new early trainer partner enquiry was submitted via agileathletes.app/trainers.</p>
+<p>A new early trainer partner enquiry was submitted via agileathletes.app.</p>
 
 <p><strong>{{from_name}}</strong> would like to learn more about Phase 1.</p>
 
@@ -187,23 +187,13 @@ This is **not a site bug** — EmailJS reached Gmail, but Google did not grant s
 
 ## Deploy to Vercel
 
-### Option A — `/trainers` path on `agileathletes.app`
+The page is served from the root of `agileathletes.app`.
 
-**Subfolder deploy (recommended):**
+1. Push to GitHub, import in Vercel, set the project root to this folder.
+2. Add custom domains: `agileathletes.app` and `www.agileathletes.app` (redirect `www` to the apex).
+3. SSL is automatic.
 
-```
-website/
-├── index.html              # optional stub for apex /
-└── trainers/
-    ├── index.html          # this landing page
-    ├── css/
-    ├── js/
-    └── assets/
-```
-
-Push to GitHub, import in Vercel, set root to the repo. The page will be at `/trainers/`.
-
-**Separate project with rewrites** — add `vercel.json` at project root:
+The `vercel.json` rewrites keep old `/trainers` links working by serving them from the root:
 
 ```json
 {
@@ -214,20 +204,14 @@ Push to GitHub, import in Vercel, set root to the repo. The page will be at `/tr
 }
 ```
 
-### Option B — `trainers.agileathletes.app` (simplest)
-
-1. Deploy this folder as a Vercel/Netlify project.
-2. Add custom domain: `trainers.agileathletes.app`.
-3. DNS: **CNAME** `trainers` → your host URL (e.g. `your-project.vercel.app`).
-4. SSL is automatic.
+The Open Graph URLs in `index.html` (`og:url`, `og:image`, `twitter:image`) point at `https://agileathletes.app/`. Update them if the domain changes.
 
 ## DNS checklist (apex `agileathletes.app`)
 
 | Record | Purpose |
 |--------|---------|
 | `A` / `ALIAS` `@` → Vercel/Netlify | Apex domain |
-| `CNAME` `www` → host | Optional www |
-| `CNAME` `trainers` → host | Subdomain approach |
+| `CNAME` `www` → host | `www` (redirects to apex) |
 
 `.app` domains require HTTPS — Vercel/Netlify handle this automatically.
 
